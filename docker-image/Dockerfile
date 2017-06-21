@@ -7,16 +7,16 @@ ADD config/elasticsearch.yml /usr/share/elasticsearch/config
 ADD config/logstash.yml /usr/share/elasticsearch/config/
 ADD config/kibana.yml /usr/share/elasticsearch/config/
 ADD config/log4j.properties /usr/share/elasticsearch/config/
-#ADD config/jvm.options /usr/share/elasticsearch/config/
+ADD config/jvm.options /usr/share/elasticsearch/config/
 ADD config/logstash-twitter.conf /usr/share/elasticsearch/pipeline/
 
 #copy startup script
 ADD startup.sh /usr/share/elasticsearch/
 
-RUN chown --recursive elasticsearch:elasticsearch /usr/share/elasticsearch/config/ /usr/share/elasticsearch/pipeline/ /usr/share/kibana/ /var/lib/kibana/ /usr/share/logstash/
+RUN chown --recursive elasticsearch:elasticsearch /usr/share/elasticsearch/config/ /usr/share/elasticsearch/pipeline/
 RUN chmod 0777 startup.sh
 
-EXPOSE 9500 9200 5601
+EXPOSE 9500 9200 5601 1880
 
 USER elasticsearch
 
