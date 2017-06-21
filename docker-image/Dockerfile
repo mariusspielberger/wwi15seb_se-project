@@ -1,5 +1,5 @@
 #start with elastic as base
-FROM docker-base-image
+FROM mariusspielberger/se-project-base:latest
 
 USER root
 
