@@ -9,6 +9,7 @@ ADD config/kibana.yml /usr/share/elasticsearch/config/
 ADD config/log4j.properties /usr/share/elasticsearch/config/
 ADD config/jvm.options /usr/share/elasticsearch/config/
 ADD config/logstash-twitter.conf /usr/share/elasticsearch/pipeline/
+ADD config/flows_se-project.json /tmp/
 
 #copy startup script
 ADD startup.sh /usr/share/elasticsearch/
