@@ -20,6 +20,8 @@ RUN ln -s /usr/share/node/bin/npm /usr/bin/npm
 RUN chmod 0777 /usr/bin/node /usr/bin/npm
 
 RUN npm install node-red
+RUN cd /usr/share/elasticsearch/node_modules/node-red
+RUN npm install node-red-node-geohash
 
 ADD settings.js /usr/share/elasticsearch/node_modules/node-red/
 RUN chown elasticsearch: /usr/share/elasticsearch/node_modules/node-red/settings.js
