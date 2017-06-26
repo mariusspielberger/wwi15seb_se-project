@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "a2e57ca0-5a58-11e7-8cfd-ef73bdedf4f6",
+    "_type": "visualization",
+    "_source": {
+      "title": "Count all Tweets",
+      "visState": "{\"title\":\"Count all Tweets\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logstash-*\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  }
+]
