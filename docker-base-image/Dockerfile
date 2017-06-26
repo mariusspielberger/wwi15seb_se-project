@@ -21,7 +21,8 @@ RUN chmod 0777 /usr/bin/node /usr/bin/npm
 
 RUN npm install node-red
 
-ADD settings.js ~/node_modules/node-red/
+ADD settings.js /usr/share/elasticsearch/node_modules/node-red/
+RUN chown elasticsearch: /usr/share/elasticsearch/node_modules/node-red/settings.js
 
 EXPOSE 1880
 
