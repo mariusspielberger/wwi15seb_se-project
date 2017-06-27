@@ -16,7 +16,9 @@ RUN chown elasticsearch: /usr/share/elasticsearch/.node-red/
 #copy startup script
 ADD startup.sh /usr/share/elasticsearch/
 
-RUN chown --recursive elasticsearch:elasticsearch /usr/share/elasticsearch/config/ /usr/share/elasticsearch/pipeline/
+RUN cd /usr/share/elasticsearch/node_modules/node-red && npm install node-red-node-geohash
+
+RUN chown --recursive elasticsearch:elasticsearch /usr/share/elasticsearch/config/ /usr/share/elasticsearch/pipeline/ /usr/share/elasticsearch/node_modules/node-red/node_modules
 RUN chmod 0777 startup.sh
 
 EXPOSE 9500 9600 9200 5601 1880
