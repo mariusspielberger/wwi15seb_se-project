@@ -24,7 +24,7 @@ RUN npm install node-red
 ADD settings.js /usr/share/elasticsearch/node_modules/node-red/
 RUN chown elasticsearch: /usr/share/elasticsearch/node_modules/node-red/settings.js
 
-RUN cd /usr/share/elasticsearch/node_modules/node-red && npm install node-red-node-geohash
+RUN npm install node-red-node-geohash
 
 EXPOSE 1880
 
