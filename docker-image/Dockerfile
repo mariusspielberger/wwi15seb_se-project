@@ -9,7 +9,7 @@ ADD config/kibana.yml /usr/share/elasticsearch/config/
 ADD config/log4j.properties /usr/share/elasticsearch/config/
 ADD config/jvm.options /usr/share/elasticsearch/config/
 ADD config/logstash-twitter.conf /usr/share/elasticsearch/pipeline/
-RUN mkdir /usr/share/elasticsearch/.node-red
+RUN mkdir -p /usr/share/elasticsearch/.node-red
 ADD config/flows_se-project.json /usr/share/elasticsearch/.node-red
 RUN chown elasticsearch: /usr/share/elasticsearch/.node-red/
 
