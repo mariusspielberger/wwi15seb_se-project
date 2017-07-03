@@ -1,5 +1,5 @@
 #start with elastic as base
-FROM mariusspielberger/se-project:latest
+FROM mariusspielberger/se-project-base:latest
 
 USER root
 
