@@ -1,5 +1,5 @@
 #start with elastic as base
-FROM docker.elastic.co/elasticsearch/elasticsearch:5.4.1
+FROM docker.elastic.co/elasticsearch/elasticsearch:5.5.0
 
 USER root
 
