@@ -21,4 +21,4 @@ Double-click on it to open the menu, select the _“add new credentials”_-opti
 
 ### Please Notice
 
-The Tweets you’ll import all refer to the Hashtag “Trump”. In the twitter-node menu (as mentioned in step 3)you have the option to modify the list of Hashtags, for example if you’d rather analyze what people tweet about Putin or puppies.
+The Tweets you’ll import all refer to the Hashtag “Trump”. In the twitter-node menu (as mentioned in step 3) you have the option to modify the list of Hashtags, for example if you’d rather analyze what people tweet about Putin or puppies.
