@@ -26,7 +26,7 @@ RUN chown --recursive elasticsearch:elasticsearch /usr/share/elasticsearch/confi
 RUN chmod 0777 startup.sh
 
 #bring up elastic and import the snapshot data && and delete snapshot from repo
-#RUN echo 'Run elastic' && elasticsearch & echo 'Wait for it to start' && sleep 60s && echo 'make repo known' && curl -H 'Content-Type:application/json' -d '{"type":"fs","settings":{"compress":true,"location":"repo"}}' -X PUT localhost:9200/_snapshot/repo && sleep 10s && echo 'restore backup' && curl -X POST localhost:9200/_snapshot/repo/snap/_restore && echo 'wait for it to finish properly' && sleep 60s && echo 'delet snapshot' && curl -X DELETE localhost:9200/_snapshot/repo/snap && sleep 10s
+RUN echo 'Run elastic' && elasticsearch & echo 'Wait for it to start' && sleep 60s && echo 'make repo known' && curl -H 'Content-Type:application/json' -d '{"type":"fs","settings":{"compress":true,"location":"repo"}}' -X PUT localhost:9200/_snapshot/repo && sleep 10s && echo 'restore backup' && curl -X POST localhost:9200/_snapshot/repo/snap/_restore && echo 'wait for it to finish properly' && sleep 60s && echo 'delet snapshot' && curl -X DELETE localhost:9200/_snapshot/repo/snap && sleep 10s
 
 #elastic gets killed as the bash dies; so no work for us here :)
 
