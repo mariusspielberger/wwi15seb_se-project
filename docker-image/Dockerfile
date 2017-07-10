@@ -25,6 +25,9 @@ ADD snapshots /usr/share/elasticsearch/snapshots
 RUN chown --recursive elasticsearch:elasticsearch /usr/share/elasticsearch/config/ /usr/share/elasticsearch/pipeline/ /usr/share/elasticsearch/node_modules/node-red/node_modules /usr/share/elasticsearch/snapshots
 RUN chmod 0777 startup.sh
 
+#becasue elastic starts whining if started as root
+USER elasticsearch
+
 #bring up elastic and import the snapshot data && and delete snapshot from repo
 RUN echo 'Run elastic' && elasticsearch & echo 'Wait for it to start' && sleep 60s && echo 'make repo known' && curl -H 'Content-Type:application/json' -d '{"type":"fs","settings":{"compress":true,"location":"repo"}}' -X PUT localhost:9200/_snapshot/repo && sleep 10s && echo 'restore backup' && curl -X POST localhost:9200/_snapshot/repo/snap/_restore && echo 'wait for it to finish properly' && sleep 60s && echo 'delet snapshot' && curl -X DELETE localhost:9200/_snapshot/repo/snap && sleep 10s
 
@@ -32,7 +35,5 @@ RUN echo 'Run elastic' && elasticsearch & echo 'Wait for it to start' && sleep 6
 
 
 EXPOSE 9500 9600 9200 9300 5601 1880
-
-USER elasticsearch
 
 CMD ["/bin/bash", "/usr/share/elasticsearch/startup.sh"]
