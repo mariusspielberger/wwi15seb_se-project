@@ -9,6 +9,10 @@ ADD config/kibana.yml /usr/share/elasticsearch/config/
 ADD config/log4j.properties /usr/share/elasticsearch/config/
 ADD config/jvm.options /usr/share/elasticsearch/config/
 ADD config/logstash-twitter.conf /usr/share/elasticsearch/pipeline/
+RUN mkdir -p /usr/share/elasticsearch/node_modules/node-red-contrib-mapauth
+ADD config/map-auth.html /usr/share/elasticsearch/node_modules/node-red-contrib-mapauth/
+ADD config/map-auth.js /usr/share/elasticsearch/node_modules/node-red-contrib-mapauth/
+ADD config/package.json /usr/share/elasticsearch/node_modules/node-red-contrib-mapauth/
 RUN mkdir -p /usr/share/elasticsearch/.node-red
 ADD config/flows_se-project.json /usr/share/elasticsearch/.node-red
 RUN chown elasticsearch: /usr/share/elasticsearch/.node-red/
@@ -17,6 +21,8 @@ RUN chown elasticsearch: /usr/share/elasticsearch/.node-red/
 ADD startup.sh /usr/share/elasticsearch/
 
 RUN cd /usr/share/elasticsearch/node_modules/node-red && npm install node-red-node-geohash@0.0.7
+
+RUN cd /usr/share/elasticsearch/node_modules/node-red-contrib-mapauth/ && npm link && cd /usr/share/elasticsearch/.node-red && npm link node-red-contrib-mapauth
 
 #add snapshot data
 ADD snapshots /usr/share/elasticsearch/snapshots

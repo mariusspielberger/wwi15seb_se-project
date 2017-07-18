@@ -1,0 +1,30 @@
+<script type="text/javascript">
+    RED.nodes.registerType('map-auth',{
+        category: 'function',
+        color: '#a6bbcf',
+        defaults: {
+            appId: {value:""},
+            appCode: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        label: function() {
+            return this.name||"map-auth";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="map-auth">
+    <div class="form-row">
+        <label for="node-input-appId"><i class="icon-tag"></i> AppId</label>
+        <input type="text" id="node-input-appId" placeholder="AppId">
+    </div>
+    <div class="form-row">
+        <label for="node-input-appCode"><i class="icon-tag"></i> AppCode</label>
+        <input type="text" id="node-input-appCode" placeholder="AppCode">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="map-auth">
+    <p>A simple node that converts the message payloads into all lower-case characters</p>
+</script>
