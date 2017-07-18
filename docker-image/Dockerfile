@@ -16,6 +16,7 @@ ADD config/package.json /usr/share/elasticsearch/node_modules/node-red-contrib-m
 RUN mkdir -p /usr/share/elasticsearch/.node-red
 ADD config/flows_se-project.json /usr/share/elasticsearch/.node-red
 RUN chown elasticsearch: /usr/share/elasticsearch/.node-red/
+RUN chown elasticsearch: /usr/share/elasticsearch/node_modules/
 
 #copy startup script
 ADD startup.sh /usr/share/elasticsearch/
