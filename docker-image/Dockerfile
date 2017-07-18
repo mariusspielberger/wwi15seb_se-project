@@ -23,8 +23,6 @@ ADD startup.sh /usr/share/elasticsearch/
 
 RUN cd /usr/share/elasticsearch/node_modules/node-red && npm install node-red-node-geohash@0.0.7
 
-#RUN cd /usr/share/elasticsearch/node_modules/node-red-contrib-mapauth/ && npm link && cd /usr/share/elasticsearch/.node-red && npm link node-red-contrib-mapauth
-
 #add snapshot data
 ADD snapshots /usr/share/elasticsearch/snapshots
 
