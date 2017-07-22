@@ -19,6 +19,14 @@ Double-click on it to open the menu, select the _“add new credentials”_-opti
 4. Now you’ll need to authenticate with twitter. If you don’t have an account, you _must_ set up one before performing this step. If the authentication has been successful, go back to Node-RED, where you’ll see your Twitter ID. Now press the “_add_”-button. To finish the Node-RED setup, click on “_deploy_” in the top right corner. 
 5. Now, go to Kibana on [localhost:5601](http://localhost:5601//). You will be greeted with a screen saying you’ll have to configure an index pattern. Leave everything as it is and click on “create”. (_If the button stays disabled, try refreshing the site [F5 or Ctrl + R]_) In the “discover”-Tab you should be able to see the raw data of the first tweets imported.
 
+###Here-API
+
+In order to provide a heatmap of where tweets have been posted, Kibana needs geohashes. Unfortunately, tweets do not provide this information. This is why we use a free trial of the HERE-API, which provides the geohashes based on location names. In case the 90-day trial runs out we’ll need to configure a new account on https://developer.here.com/?create=Evaluation&keepState=true&step=account and replace the outrun one in Node-RED with it. Take the AppID and the AppCode you receive and enter it into the following node:
+
+![Node representing the Here-API](https://github.com/mariusspielberger/wwi15seb_se-project/blob/master/images/HereAPI.jpg)7
+
+
 ### Please Notice
 
 The Tweets you’ll import all refer to the Hashtag “Trump”. In the twitter-node menu (as mentioned in step 3) you have the option to modify the list of Hashtags, for example if you’d rather analyze what people tweet about Putin or puppies.
+
