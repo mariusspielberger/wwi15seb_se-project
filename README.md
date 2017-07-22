@@ -23,7 +23,7 @@ Double-click on it to open the menu, select the _“add new credentials”_-opti
 
 In order to provide a heatmap of where tweets have been posted, Kibana needs geohashes. Unfortunately, tweets do not provide this information. This is why we use a free trial of the HERE-API, which provides the geohashes based on location names. In case the 90-day trial runs out we’ll need to configure a new account on https://developer.here.com/?create=Evaluation&keepState=true&step=account and replace the outrun one in Node-RED with it. Take the AppID and the AppCode you receive and enter it into the following node:
 
-![Node representing the Here-API](https://github.com/mariusspielberger/wwi15seb_se-project/blob/master/images/HereAPI.jpg)7
+![Node representing the Here-API](https://github.com/mariusspielberger/wwi15seb_se-project/blob/master/images/HereAPI.jpg)
 
 
 ### Please Notice
