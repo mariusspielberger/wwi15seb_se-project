@@ -15,8 +15,9 @@ Double-click on it to open the menu, select the _“add new credentials”_-opti
 
 ![This one](https://raw.githubusercontent.com/mariusspielberger/wwi15seb_se-project/d95a0b555490b150d2f60284e6fcd0b070d97616/images/addtwitter.jpg)
 
-3. Now you’ll need to authenticate with twitter. If you don’t have an account, you _must_ set up one before performing this step. If the authentication has been successful, go back to Node-RED, where you’ll see your Twitter ID. Now press the “_add_”-button. To finish the Node-RED setup, click on “_deploy_” in the top right corner. 
-4. Now, go to Kibana on [localhost:5601](http://localhost:5601//). You will be greeted with a screen saying you’ll have to configure an index pattern. Leave everything as it is and click on “create”. (_If the button stays disabled, try refreshing the site [F5 or Ctrl + R]_) In the “discover”-Tab you should be able to see the raw data of the first tweets imported.
+3. Now you’ll need to authenticate with twitter. If you don’t have an account, you _must_ set up one before performing this step. If the authentication has been successful, go back to Node-RED, where you’ll see your Twitter ID. Now press the “_add_”-button. 
+4. To finish the Node-RED setup, click on “_deploy_” in the top right corner. 
+5. Now, go to Kibana on [localhost:5601](http://localhost:5601//). You will be greeted with a screen saying you’ll have to configure an index pattern. Leave everything as it is and click on “create”. (_If the button stays disabled, try refreshing the site [F5 or Ctrl + R]_) In the “discover”-Tab you should be able to see the raw data of the first tweets imported.
 
 ### Here-API
 
