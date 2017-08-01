@@ -17,7 +17,7 @@ Double-click on it to open the menu, select the _“add new credentials”_-opti
 
 * Now you’ll need to authenticate with twitter. If you don’t have an account, you _must_ set up one before performing this step. If the authentication has been successful, go back to Node-RED, where you’ll see your Twitter ID. Now press the “_add_”-button. 
 * To finish the Node-RED setup, click on “_deploy_” in the top right corner. 
-* Now, go to Kibana on [localhost:5601](http://localhost:5601//) or [http://192.168.99.100:5601/](http://192.168.99.100:5601/). You will be greeted with a screen saying you’ll have to configure an index pattern. Leave everything as it is and click on “create”. (_If the button stays disabled, try refreshing the site [F5 or Ctrl + R]_) In the “discover”-Tab you should be able to see the raw data of the first tweets imported.
+* Now, go to Kibana on [localhost:5601](http://localhost:5601//) or [http://192.168.99.100:5601/](http://192.168.99.100:5601/). In the “discover”-Tab you should be able to see the raw data of the first tweets imported.
 * Click on *Dashboards* in the panel on the left side. Here you can find pre-configured dashboards visualizing the data. 
 * Have fun! 
 
