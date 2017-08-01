@@ -3,7 +3,8 @@ A repository for the software engineering project (4th semester).
 
 ## How to use
 
-* Start the container with the following command: **docker run --rm -ti -p 9200:9200 -p 5601:5601 -p 9500:9500 -p 9600:9600 -p 1880:1880 --name container mariusspielberger/se-project** The startup can take up to three minutes, afterwards it should look somewhat like this:
+* Start the container with the following command: **docker run --rm -ti -p 9200:9200 -p 5601:5601 -p 9500:9500 -p 9600:9600 -p 1880:1880 --name container mariusspielberger/se-project** 
+The startup can take up to three minutes, afterwards it should look somewhat like this:
 
 ![Console after startup](https://raw.githubusercontent.com/mariusspielberger/wwi15seb_se-project/d95a0b555490b150d2f60284e6fcd0b070d97616/images/startup.jpg)
 * Now you’ll need to set up Node-RED on [localhost:1880](http://localhost:1880/) to be able to receive the desired tweets. Look at the flow: one of the nodes says _“Twitter”_. 
@@ -22,7 +23,7 @@ Double-click on it to open the menu, select the _“add new credentials”_-opti
 
 In order to provide a heatmap of where tweets have been posted, Kibana needs geohashes. Unfortunately, tweets do not provide this information. This is why we use a free trial of the HERE-API, which provides the geohashes based on location names. In case the 90-day trial runs out we’ll need to configure a new account on https://developer.here.com/?create=Evaluation&keepState=true&step=account and replace the outrun one in Node-RED with it. Take the AppID and the AppCode you receive and enter it into the following node:
 
-![Node representing the Here-API](https://raw.githubusercontent.com/mariusspielberger/wwi15seb_se-project/d95a0b555490b150d2f60284e6fcd0b070d97616/images/HereAPI.jpg)
+![Node representing the Here-API](https://raw.githubusercontent.com/mariusspielberger/wwi15seb_se-project/95f8ece641ae6235c6dfbda9fb12359f47e3e51c/images/HereAPI.jpg)
 
 
 ### Please Notice
