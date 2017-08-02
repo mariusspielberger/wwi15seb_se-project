@@ -34,7 +34,7 @@ To refer to that Snapshot, navigate into a Dashboard as described in _How to use
 
 ![Timerange](https://raw.githubusercontent.com/mariusspielberger/wwi15seb_se-project/3f4636afce424153b894a37df4cc2240e20595b2/images/kibana.png)
 
-Set the parameters like this:
+Set the parameters like this:  
 From: **2017-07-11 11:00:00.000**  
 To: **2017-07-11 14:00:00.000**
 
