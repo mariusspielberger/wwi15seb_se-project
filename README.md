@@ -35,9 +35,10 @@ To refer to that Snapshot, navigate into a Dashboard as described in _How to use
 ![Timerange](https://raw.githubusercontent.com/mariusspielberger/wwi15seb_se-project/3f4636afce424153b894a37df4cc2240e20595b2/images/kibana.png)
 
 Set the parameters like this:
-From: 2017-07-11 11:00:00.000
-To: 2017-07-11 14:00:00.000
-And press Go. 
+From: **2017-07-11 11:00:00.000**  
+To: **2017-07-11 14:00:00.000**
+
+And press Go to enjoy the data.
 
 #### Changing the #-Subject
 The Tweets you’ll import all refer to the Hashtag “Trump”. In the twitter-node menu (as mentioned in step 3) you have the option to modify the list of Hashtags, for example if you’d rather analyze what people tweet about Putin or puppies.
