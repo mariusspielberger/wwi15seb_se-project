@@ -27,9 +27,20 @@ In order to provide a heatmap of where tweets have been posted, Kibana needs geo
 
 ![Node representing the Here-API](https://raw.githubusercontent.com/mariusspielberger/wwi15seb_se-project/95f8ece641ae6235c6dfbda9fb12359f47e3e51c/images/HereAPI.jpg)
 
-
 ### Additional Information 
+#### Using the snapshot
+When you hit **deploy** in Node-RED, the container starts logging the tweets coming from the twitter API. Unfortunately we're only able to receive the newest tweets (the ones posted after you hit deploy). To provide you a useful dashboard there needs to be a big collection of tweets, so we already included a snapshot with a big collection of tweets in Kibana.
+To refer to that Snapshot, navigate into a Dashboard as described in _How to use_. Click on timestamp in the top right corner and change to  _absolute_ time range. 
 
+![Timerange](https://raw.githubusercontent.com/mariusspielberger/wwi15seb_se-project/3f4636afce424153b894a37df4cc2240e20595b2/images/kibana.png)
+
+Set the parameters like this:
+From: 2017-07-11 11:00:00.000
+To: 2017-07-11 14:00:00.000
+And press Go. 
+
+#### Changing the #-Subject
 The Tweets you’ll import all refer to the Hashtag “Trump”. In the twitter-node menu (as mentioned in step 3) you have the option to modify the list of Hashtags, for example if you’d rather analyze what people tweet about Putin or puppies.
 
+#### Other Visualizations
 It's also possible to create your own visualizations in Kibana. To do so, navigate into the *Visualize*-Tab. Click on the **+** next to the search bar and start creating. 
